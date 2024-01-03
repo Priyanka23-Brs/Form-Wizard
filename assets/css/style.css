@@ -1,4 +1,4 @@
-/*
+ /*
 Author:    Build Rise Shine with Nyros (BRS)
 Created:   11.05.2022
 Library / Component: Styling page for the app
@@ -24,9 +24,25 @@ body {
 }
 
 h1 {
-    color: var(--primary-color);
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    text-align: center;
 }
-
+.git{
+    text-align: center;
+}
+.btns {
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+   }
+   
 p {
     text-align: center;
 }
@@ -126,7 +142,7 @@ img {
 
 header h3 {
     font: normal normal 600 18px/27px Oswald;
-    color: #fff;
+    color:blue;
 }
 
 header h4 {
