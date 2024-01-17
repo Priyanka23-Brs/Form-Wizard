@@ -25,7 +25,7 @@
     </div>
   </header>
 
-  <main role="main text-center" style="height: auto;">
+  <main role="main text-center" style="height: 740px;">
     <div class="wrapper h-100">
       <div class="Grid Grid--full Grid--center" >
         <div class="Grid-cell h-80 OuterFormBlock"  style="background-color:aliceblue;">
@@ -37,7 +37,7 @@
                     <div class="brandSection">
                       <!-- <img src="assets/img/logo.jpg" /> -->
                       <h1>Manifest in an Empowering Software Career</h1>
-                      
+                    
                     </div>
                     <form
                       name="myform"
@@ -53,6 +53,7 @@
                           id="firstname"
                           size="50"
                           placeholder="First Name"
+                          pattern="[a-z]*"
                           autocomplete = "off"
 
                         />
@@ -89,12 +90,20 @@
                       <div class="errorMesg">
                         <input type="email" autocomplete = "off"
                          name="email" id="email" size="20"  placeholder="Email" />
+
                       </div>
-                      <form id="phoneForm">
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" id="phone" name="phone" placeholder="+91 9999999999" required>
-                     </form>
-&nbsp;
+                       
+<label class="hide">Phone Number</label>
+<div class="errorMesg">
+  <input
+    type="text"
+    name="phone"
+    id="phone"
+    size="50"
+    placeholder="Phone Number"
+    autocomplete = "off"
+  />
+</div>
                       <label class="hide">Password</label>
                       <div class="passwordWrap">
                         <input
@@ -191,7 +200,8 @@
                   <div class="brandSection brandSectionRight">
                     <img src="assets/img/rocket.png" class="brandLogo" />
                     <h1>Manifest in an Empowering Software Career</h1>
-                    </div>
+                     
+                  </div>
                 </div>
               </div>
             </div>
@@ -202,7 +212,7 @@
   </main>
 &nbsp;
   <footer class="footer footer-dark">
-    <div class="d-flex justify-content-center px-5">
+    <div class="d-flex justify-content-between px-5">
        <div>
         <button onclick="setTheme('#1A4B84')" class="theme-switch theme-switch-chathams_blue"></button>
         <button onclick="setTheme('#991E14')" class="theme-switch theme-switch-tamarillo"></button>
