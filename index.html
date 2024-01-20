@@ -93,17 +93,19 @@
 
                       </div>
                        
-<label class="hide">Phone Number</label>
-<div class="errorMesg">
-  <input
-    type="text"
-    name="phone"
-    id="phone"
-    size="50"
-    placeholder="Phone Number"
-    autocomplete = "off"
-  />
-</div>
+                      <label class="hide">Phone Number</label>
+                      <div class="hide">
+                        <input
+                          type="text"
+                          name="phone"
+                          id="radio"
+                          size="50"
+                          placeholder="9999999999"
+                          autocomplete="off"
+                          pattern="[0-9]{10}"
+                          required />
+                       </div>
+ 
                       <label class="hide">Password</label>
                       <div class="passwordWrap">
                         <input
