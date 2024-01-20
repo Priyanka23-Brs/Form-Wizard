@@ -1,11 +1,4 @@
-/** 
-Author: Build Rise Shine with Nyros (BRS) 
-Created: 2023 
-Library / Component: signup form 
-Description: Logic for signup form
-(c) Copyright by BRS with Nyros. 
-**/
-
+  
 /*form validation logic*/
 window.onload = function () {
   let root = document.forms[0].elements
@@ -26,6 +19,7 @@ window.onload = function () {
       root[elementNumber].onkeyup = function () {
         email(this)
       }
+      
     } else if (root[elementNumber].type == 'submit') {
       root[elementNumber].onclick = function () {
         return validation(root[elementNumber])
