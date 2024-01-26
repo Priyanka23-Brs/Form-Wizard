@@ -48,9 +48,17 @@
                       <div>
                         <div id="date_picker"></div>
                       </div>
+                      <form id="phoneNumberForm">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" oninput="validatePhoneNumber(this.value)">
 
+                        <p id="error" class="error"></p>
+                        <button type="submit" onclick="submitForm()">Submit</button>
+
+                       </form>
+                     
                       <div>
-                        <button class="btn btn-primary" type="submit">Continue</button>
+                       <!--<button class="btn btn-primary" type="submit" onclick="submitForm()">Continue</button>-->
                       </div>
                     </form>
                     <div>
