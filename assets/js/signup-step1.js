@@ -12,6 +12,14 @@ window.onload = function () {
         text(this)
       }
     }
+    if (root[elementNumber].type == 'phone') {
+      root[elementNumber].onfocus = function () {
+        myFocus(this)
+      }
+      root[elementNumber].onkeyup = function () {
+        phone(this)
+      }
+    }
     if (root[elementNumber].type == 'email') {
       root[elementNumber].onfocus = function () {
         myFocus(this)
@@ -108,8 +116,8 @@ function email(emailValid) {
     }
   }
 }
-//---------------------------------------------------------------------------------
-//password validation
+//---------------------------------------------------------------------
+ //password validation
 let parameters = {
   count: false,
   letters: false,
@@ -224,6 +232,17 @@ function validation(form) {
         return false
       }
     } else if (type == 'email') {
+      if (x[i].value.length == 0) {
+        x[i].focus()
+        x[i].style.border="1px solid red";
+        return false
+      }
+      if (match.test(x[i].value) != true) {
+        x[i].focus()
+        x[i].style.border="1px solid red";
+        return false
+      }
+    } else if (type == 'phone') {
       if (x[i].value.length == 0) {
         x[i].focus()
         x[i].style.border="1px solid red";
