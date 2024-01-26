@@ -1,4 +1,4 @@
-  
+   
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,17 +48,28 @@
                       <div>
                         <div id="date_picker"></div>
                       </div>
-                      <form id="phoneNumberForm">
+                      <!--<form id="phoneNumberForm">
                         <label for="phoneNumber">Phone Number:</label>
                         <input type="text" id="phoneNumber" name="phoneNumber" oninput="validatePhoneNumber(this.value)">
 
                         <p id="error" class="error"></p>
-                        <button type="submit" onclick="submitForm()">Submit</button>
+                        <button class="btn btn-primary" type="submit" onclick="submitForm()">Submit</button>
 
-                       </form>
-                     
+                       </form>-->
+                       <label class="hide">Phone Number</label>
+                       <div class="hide">
+                         <input
+                           type="text"
+                           name="phone"
+                           id="radio"
+                           size="50"
+                           placeholder="Enter 10 digit Phone Number"
+                           autocomplete="off"
+                           pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                           required />
+                       </div>
                       <div>
-                       <!--<button class="btn btn-primary" type="submit" onclick="submitForm()">Continue</button>-->
+                       <button class="btn btn-primary" type="submit" onclick="submitForm()">Continue</button>
                       </div>
                     </form>
                     <div>
