@@ -1,9 +1,4 @@
- /*
-Author:    Build Rise Shine with Nyros (BRS)
-Created:   11.05.2022
-Library / Component: Styling page for the app
-(c) Copyright by BRS with Nyros.
-*/
+ 
 
 :root {
     --primary-color: #1A4B84;
@@ -42,8 +37,10 @@ h1 {
     border-radius: 5px;
     transition: all .4s;
    }
-   
-p {
+   .error {
+    color: red;
+  }
+  p {
     text-align: center;
 }
 
