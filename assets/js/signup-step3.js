@@ -8,21 +8,23 @@ $(function () {
   })
 })
 
-//Phone Number
-                    
-function validatePhoneNumber(input) {
-  var phoneNumberInput = input.replace(/\D/g, ''); // Remove non-digit characters
-  document.getElementById('phoneNumber').value = phoneNumberInput;
 
-  var errorElement = document.getElementById('error');
-  if (/[^0-9]/.test(input)) {
-    errorElement.textContent = 'Error: Only digits are allowed in the phone number.';
-  } else if (input.length < 10) {
-    errorElement.textContent = 'Error: Phone number must contain at least 10 digits.';
-  } else if (input.length > 10) {
-    errorElement.textContent = 'Error: Phone number must contain exactly 10 digits.';
-  } else {
-    errorElement.textContent = '';
-    document.getElementById('tick').style.display = 'inline';
+                    
+function validation() {
+  var phoneNumberInput = document.getElementById("phone_number");
+  var phoneNumber = phoneNumberInput.value;
+  // Regular expression for a valid phone number (simple example for illustration)
+  var phoneRegex = /^\+91 \d{10}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+    alert("Invalid phone number. Please enter a valid phone number.");
+    phoneNumberInput.style.borderColor = "red";
+    phoneNumberInput.classList.add("error");
+
+    return false;
+  } 
+else {
+    // Remove error message and reset border
+    phoneNumberInput.classList.remove("error");
+    return true;
   }
 }
